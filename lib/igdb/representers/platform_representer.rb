@@ -7,7 +7,7 @@ class Igdb::PlatformRepresenter < Igdb::Representer
   property :summary
   property :alternative_name
   property :generation
-  
+
   collection :games
   collection :versions
 end

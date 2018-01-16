@@ -2,7 +2,7 @@ require 'representable/json'
 
 class Igdb::CreditsRepresenter < Igdb::Representer
   collection_representer class: Igdb::Credits
-  
+
   property :game
   property :category
   property :company

@@ -3,8 +3,8 @@ require 'representable/json'
 
 class Igdb::CompanyRepresenter < Igdb::Representer
   collection_representer class: Igdb::Company
-  
-  property :logo 
+
+  property :logo
   property :description
   property :country
   property :website
@@ -14,7 +14,7 @@ class Igdb::CompanyRepresenter < Igdb::Representer
   property :change_date
   property :change_date_category
   property :twitter
-  
+
   collection :published
   collection :developed
 end

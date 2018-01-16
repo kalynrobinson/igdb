@@ -3,7 +3,7 @@ require 'representable/json'
 
 class Igdb::ReleaseDateRepresenter < Igdb::Representer
   collection_representer class: Igdb::ReleaseDate
-  
+
   property :id
   property :game
   property :category

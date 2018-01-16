@@ -1,5 +1,5 @@
 module Igdb::Exception
-  class Base < ::Exception
+  class Base < RuntimeError
     def initialize(message)
       super(message)
     end

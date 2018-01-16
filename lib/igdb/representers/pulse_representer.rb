@@ -2,7 +2,7 @@ require 'representable/json'
 
 class Igdb::PulseRepresenter < Igdb::Representer
   collection_representer class: Igdb::Pulse
-  
+
   property :id
   property :pulse_source
   property :title
@@ -13,6 +13,6 @@ class Igdb::PulseRepresenter < Igdb::Representer
   property :published_at
   property :image
   property :author
-  
+
   collection :tags
 end

@@ -4,7 +4,7 @@ require 'representable/hash'
 class Igdb::GameRepresenter < Igdb::Representer
   collection_representer class: Igdb::Game
   include Representable::JSON
-  
+
   property :summary # Summary of the game.
   property :storyline # Plot of the game.
   property :collection # Collection (aka series) the game belongs to.
@@ -26,7 +26,7 @@ class Igdb::GameRepresenter < Igdb::Representer
   property :cover # Cover image.
   property :esrb # ESRB rating.
   property :pegi # PEGI rating.
-  
+
   collection :developers # List of companies that developed the game.
   collection :publishers # List of companies that published the game.
   collection :game_engines # List of game engines that the game uses.
@@ -36,17 +36,17 @@ class Igdb::GameRepresenter < Igdb::Representer
   collection :themes # List of themes
   collection :genres # List of genres
   collection :release_dates, extend: Igdb::ReleaseDateRepresenter,
-                             class: Igdb::ReleaseDate 
+                             class: Igdb::ReleaseDate
   collection :alternative_names, extend: Igdb::AlternativeNameRepresenter, # The alternative names of the game.
-                                 class: Igdb::AlternativeName 
-  collection :screenshots 
-  collection :videos, extend: Igdb::VideoRepresenter, class: Igdb::Video 
+                                 class: Igdb::AlternativeName
+  collection :screenshots
+  collection :videos, extend: Igdb::VideoRepresenter, class: Igdb::Video
   collection :websites
   collection :tags
-  collection :dlcs, extend: Igdb::GameRepresenter, class: Igdb::Game# IDs of Game records (expandable).
-  collection :expansions, extend: Igdb::GameRepresenter, class: Igdb::Game# IDs of Game records (expandable).
+  collection :dlcs, extend: Igdb::GameRepresenter, class: Igdb::Game # IDs of Game records (expandable).
+  collection :expansions, extend: Igdb::GameRepresenter, class: Igdb::Game # IDs of Game records (expandable).
   collection :standalone_expansions, extend: Igdb::GameRepresenter, class: Igdb::Game # IDs of Game records (expandable)
-  collection :bundles, extend: Igdb::GameRepresenter, class: Igdb::Game  # IDs of Game records (expandable)
+  collection :bundles, extend: Igdb::GameRepresenter, class: Igdb::Game # IDs of Game records (expandable)
   collection :games # IDs of Game records that are similar to this game. (expandable)
   collection :external # See the External object reference
 end

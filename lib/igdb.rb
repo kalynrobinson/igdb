@@ -1,10 +1,11 @@
 module Igdb
-  #Utilities
+  # Utilities
   autoload :Configuration, 'igdb/configuration/api'
   autoload :Requester, 'igdb/requester'
   autoload :Exception, 'igdb/exceptions'
+  autoload :VERSION, 'igdb/version'
 
-  #Models
+  # Models
   autoload :ApiResource, 'igdb/models/api_resource'
   autoload :AlternativeName, 'igdb/models/alternative_name'
   autoload :Character, 'igdb/models/character'
@@ -33,7 +34,7 @@ module Igdb
   autoload :Version, 'igdb/models/version'
   autoload :Video, 'igdb/models/video'
 
-  #Presenters
+  # Presenters
   autoload :Representer, 'igdb/representers/representer'
   autoload :AlternativeNameRepresenter, 'igdb/representers/alternative_name_representer'
   autoload :CharacterRepresenter, 'igdb/representers/character_representer'
@@ -62,7 +63,7 @@ module Igdb
   autoload :VersionRepresenter, 'igdb/representers/version_representer'
   autoload :VideoRepresenter, 'igdb/representers/video_representer'
 
-  def self.connect(api_key=ENV['IGDB_KEY'])
+  def self.connect(api_key = ENV['IGDB_KEY'])
     Igdb::Configuration::Api.instance.tap do |api|
       api.connect(api_key)
     end

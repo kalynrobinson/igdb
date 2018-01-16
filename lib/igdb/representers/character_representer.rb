@@ -5,7 +5,7 @@ require 'representable/json'
 # Video game characters
 class Igdb::CharacterRepresenter < Igdb::Representer
   collection_representer class: Igdb::Character
-  
+
   property :mug_shot # See the Image object reference.
   property :gender # See the Gender value reference.
   property :species # See the Species value reference.

@@ -2,7 +2,7 @@ require 'representable/json'
 
 class Igdb::PageRepresenter < Igdb::Representer
   collection_representer class: Igdb::Page
-  
+
   property :content
   property :category
   property :sub_category
@@ -28,7 +28,7 @@ class Igdb::PageRepresenter < Igdb::Representer
   property :origin
   property :uplay
   property :discord
-  
+
   collection :game
   collection :company
 end

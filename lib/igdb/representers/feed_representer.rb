@@ -2,7 +2,7 @@ require 'representable/json'
 
 class Igdb::FeedRepresenter < Igdb::Representer
   collection_representer class: Igdb::Feed
-  
+
   property :content
   property :category
   property :user

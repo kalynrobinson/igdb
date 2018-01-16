@@ -6,8 +6,8 @@ class Igdb::ReviewRepresenter < Igdb::Representer
 
   property :id # The id of the character.
   property :username # The name of the character.
-  property :slug # 
-  property :url # 
+  property :slug #
+  property :url #
   property :created_at
   property :updated_at
   property :title

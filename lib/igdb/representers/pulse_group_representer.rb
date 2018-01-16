@@ -3,7 +3,7 @@ require 'representable/json'
 
 class Igdb::PulseGroupRepresenter < Igdb::Representer
   collection_representer class: Igdb::PulseGroup
-  
+
   property :id
   property :name
   property :category
@@ -11,7 +11,7 @@ class Igdb::PulseGroupRepresenter < Igdb::Representer
   property :updated_at
   property :published_at
   property :game
-  
+
   collection :tags
   collection :pulses
 end
