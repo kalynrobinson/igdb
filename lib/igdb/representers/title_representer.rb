@@ -1,10 +1,13 @@
-# URL path: /titles/
 require 'representable/json'
 
-class Igdb::TitleRepresenter < Igdb::Representer
-  collection_representer class: Igdb::Title
+# URL path: /titles/
+# Job titles in the industry.
+module Igdb
+  class TitleRepresenter < Igdb::Representer
+    collection_representer class: Igdb::Title
 
-  property :description
+    property :description
 
-  collection :games
+    collection :games
+  end
 end

@@ -1,11 +1,15 @@
 require 'representable/json'
 
-class Igdb::GameEngineRepresenter < Igdb::Representer
-  collection_representer class: Igdb::GameEngine
+# URL path: /game_engines/
+# Video game engines such as unreal engine.
+module Igdb
+  class GameEngineRepresenter < Igdb::Representer
+    collection_representer class: Igdb::GameEngine
 
-  property :logo
+    property :logo
 
-  collection :games
-  collection :companies
-  collection :platforms
+    collection :games
+    collection :companies
+    collection :platforms
+  end
 end

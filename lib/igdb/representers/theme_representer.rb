@@ -1,8 +1,10 @@
-# URL path: /themes/
 require 'representable/json'
 
-class Igdb::ThemeRepresenter < Igdb::Representer
-  collection_representer class: Igdb::Theme
+# URL path: /themes/
+module Igdb
+  class ThemeRepresenter < Igdb::Representer
+    collection_representer class: Igdb::Theme
 
-  collection :games
+    collection :games
+  end
 end
