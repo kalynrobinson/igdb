@@ -53,6 +53,32 @@ $ Igdb::Game.all(offset: 5) # Offset result starting at 5th - Default 0
 ```ruby
 $ Igdb::Game.meta
 ```
+### Endpoints
+```ruby
+Igdb::Character
+Igdb::Collection
+Igdb::Company
+Igdb::Credits
+Igdb::Feed
+Igdb::Franchise
+Igdb::GameEngine
+Igdb::GameMode
+Igdb::Game
+Igdb::Genre
+Igdb::Keyword
+Igdb::Page
+Igdb::Person
+Igdb::Platform
+Igdb::PlayerPerspective
+Igdb::PulseGroup
+Igdb::Pulse
+Igdb::PulseSource
+Igdb::ReleaseDate
+Igdb::Review
+Igdb::Theme
+Igdb::Title
+Igdb::Version
+```
 ## Contributing
 
 1. Fork it ( https://github.com/ahmetabdi/igdb/fork )

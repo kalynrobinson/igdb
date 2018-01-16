@@ -23,10 +23,10 @@ module Igdb
     property :summary
 
     collection :release_dates, extend: Igdb::PlatformVersionReleaseDateRepresenter,
-                          class: Igdb::PlatformVersionReleaseDate
+                               class: Igdb::PlatformVersionReleaseDate
     collection :developers, extend: Igdb::PlatformCompanyRepresenter,
-    class: Igdb::PlatformCompany
+                            class: Igdb::PlatformCompany
     collection :manufacturers, extend: Igdb::PlatformCompanyRepresenter,
-    class: Igdb::PlatformCompany
+                               class: Igdb::PlatformCompany
   end
 end

@@ -30,11 +30,11 @@ module Igdb
     property :cover, extend: Igdb::ImageRepresenter, # Cover image.
                      class: Igdb::Image
     property :esrb, extend: Igdb::EsrbRepresenter, # ESRB rating.
-                    class: Igdb::Esrb 
+                    class: Igdb::Esrb
     property :pegi, extend: Igdb::PegiRepresenter, # PEGI rating.
-                    class: Igdb::Pegi 
+                    class: Igdb::Pegi
     property :external, extend: Igdb::ExternalRepresenter,
-    class: Igdb::External
+                        class: Igdb::External
 
     collection :developers
     collection :publishers
@@ -46,7 +46,7 @@ module Igdb
     collection :genres
     collection :screenshots
     collection :tags
-    collection :games 
+    collection :games
     collection :dlcs
     collection :expansions
     collection :standalone_expansions
@@ -54,11 +54,11 @@ module Igdb
 
     collection :release_dates, extend: Igdb::ReleaseDateRepresenter,
                                class: Igdb::ReleaseDate
-    collection :alternative_names, extend: Igdb::AlternativeNameRepresenter, 
+    collection :alternative_names, extend: Igdb::AlternativeNameRepresenter,
                                    class: Igdb::AlternativeName
     collection :videos, extend: Igdb::VideoRepresenter,
                         class: Igdb::Video
     collection :websites, extend: Igdb::WebsiteRepresenter,
-                      class: Igdb::Website
+                          class: Igdb::Website
   end
 end

@@ -7,6 +7,6 @@ module Igdb
     collection_representer class: Igdb::Feature
 
     property :game # ID of the Edition
-    property :value # Feature’s value
+    property :value # Feature's value
   end
 end

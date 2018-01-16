@@ -8,7 +8,7 @@ module Igdb
 
     property :url # Can be non-IGDB URL
     property :cloudinary_id # Cloudinary slug
-    property :width # The image’s width in pixels
-    property :height # The image’s height in pixels
+    property :width # The image's width in pixels
+    property :height # The image's height in pixels
   end
 end

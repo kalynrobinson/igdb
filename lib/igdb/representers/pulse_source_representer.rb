@@ -4,7 +4,7 @@ require 'representable/json'
 module Igdb
   class PulseSourceRepresenter < Representable::Decorator
     include Representable::JSON
-    
+
     collection_representer class: Igdb::PulseSource
 
     property :id

@@ -12,6 +12,6 @@ module Igdb
     property :position # Show at this index
 
     collection :values, extend: Igdb::FeatureValueRepresenter,
-    class: Igdb::FeatureValue
+                        class: Igdb::FeatureValue
   end
 end

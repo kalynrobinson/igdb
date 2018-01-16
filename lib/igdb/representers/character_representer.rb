@@ -11,7 +11,7 @@ module Igdb
     property :gender # See the Gender value reference.
     property :species # See the Species value reference.
 
-    collection :akas # Name aliases - ‘also known as’.
+    collection :akas # Name aliases - ‘also known as'.
     collection :games # List of games character appears in.
     collection :people # List of people associated with character.
   end
