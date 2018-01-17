@@ -2,17 +2,17 @@ PATH
   remote: .
   specs:
     igdb2 (0.8.0)
-      multi_json
-      representable (~> 3.0.4)
-      rest-client
+      multi_json (~> 1.13)
+      representable (~> 3.0)
+      rest-client (~> 2.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    codeclimate-test-reporter (1.0.8)
-      simplecov (<= 0.13)
+    codeclimate-test-reporter (1.0.7)
+      simplecov
     coderay (1.1.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -59,7 +59,7 @@ GEM
       rspec-support (~> 3.7.0)
     rspec-support (3.7.0)
     safe_yaml (1.0.4)
-    simplecov (0.13.0)
+    simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
@@ -78,15 +78,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.16.0)
-  codeclimate-test-reporter (~> 1.0.8)
+  bundler (~> 1.16)
+  codeclimate-test-reporter (~> 1.0)
   igdb2!
-  pry
-  rake (~> 12.3.0)
-  rspec (~> 3.7.0)
-  simplecov
-  vcr (~> 4.0.0)
-  webmock (~> 3.2.1)
+  pry (~> 0.11)
+  rake (~> 12.3)
+  rspec (~> 3.7)
+  simplecov (~> 0.15)
+  vcr (~> 4.0)
+  webmock (~> 3.2)
 
 BUNDLED WITH
    1.16.0
