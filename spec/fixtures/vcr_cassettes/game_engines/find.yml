@@ -14,7 +14,7 @@ http_interactions:
       User-Agent:
       - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.0p0
       User-Key:
-      - 070702fa7336d87a8cdd509beb23e2f4
+      - ENV['IGDB_KEY']
       Host:
       - api-2445582011268.apicast.io
   response:
