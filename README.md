@@ -22,37 +22,45 @@ If no parameter is given, Igdb will default to ENV['IGDB_KEY'].
 $ Igdb.connect # => Igdb.connect(ENV['IGDB_KEY'])
 ```
 ### Usage
-  Find game by ID
+Find game by ID
 ```ruby
 $ Igdb::Game.find(1971) 
 ```
-  Find game by ID with options
+Find game by ID with options
 ```ruby
 $ Igdb::Game.find(1971, fields: 'slug,name')
 ```
-  Find a game by slug
+Find a game by slug
 ```ruby
 $ Igdb::Game.find('world-of-warcraft')
 ```
-  Search for games
+Select multiple games
+```ruby
+$ Igdb::Game.select(1, 2, 3, order: 'popularity:desc') # OR .select([1, 2, 3])
+```
+Select multiple games with options
 ```ruby
 $ Igdb::Game.select(
-    fields: 'name,popularity', 
-    order: 'popularity:desc', 
-    'filter[total_rating_count][gt]': 10
+    [1, 2, 3],
+    expand: 'genres'
+    fields: 'name,genres.name'
   )
 ```
-  Return the number of games in the database
+Return a list of all games
+```ruby
+$ Igdb::Game.all
+$ Igdb::Game.all(limit: 10) # Limit to 10 results - Default 50 (Max)
+$ Igdb::Game.all(offset: 5) # Offset result starting at 5th - Default 0
+```
+Search for games
+```ruby
+$ Igdb::Game.all(search: 'super mario')
+```
+Return the number of games in the database
 ```ruby
 $ Igdb::Game.count
 ```
-  Return a list of all games
-```ruby
-$ Igdb::Game.all
-$ Igdb::Game.all(limit: 10) # Limit to 10 results - Default 100
-$ Igdb::Game.all(offset: 5) # Offset result starting at 5th - Default 0
-```
-  Return the available properties of games
+Return the available properties of games
 ```ruby
 $ Igdb::Game.meta
 ```
