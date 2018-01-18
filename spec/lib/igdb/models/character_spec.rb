@@ -12,7 +12,7 @@ describe Igdb::Character do
       it { expect(subject).to respond_to(:meta) }
       it { expect(subject).to respond_to(:count) }
       it { expect(subject).to respond_to(:find) }
-      it { expect(subject).to respond_to(:search) }
+      it { expect(subject).to respond_to(:select) }
       it { expect(subject).to respond_to(:all) }
     end
 
