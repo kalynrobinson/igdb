@@ -14,37 +14,33 @@ module Igdb
         Igdb::Requester.get("#{path}/meta")
       end
 
-      def find(id, **kwargs)
-        kwargs[:fields] = kwargs[:fields] || '*'
+      def find(id, **params)
+        params[:fields] ||= '*'
+        return find_by_slug(id, params) if id.class == String
 
-        if id.class == Array
-          build_collection(Igdb::Requester.get("#{path}/#{id.join(',')}", kwargs), representer)
-        else
-          build_single_resource(Igdb::Requester.get("#{path}/#{id}", kwargs)[0], representer)
-        end
+        build_single_resource(Igdb::Requester.get("#{path}/#{id}", params)[0], representer)
       end
 
-      def slug(id, **kwargs)
-        kwargs[:fields] = kwargs[:fields] || '*'
-        kwargs[:'filter[slug][eq]'] = id
+      def select(*ids, **params)
+        params[:fields] ||= '*'
 
-        build_single_resource(Igdb::Requester.get("#{path}/", kwargs)[0], representer)
+        build_collection(Igdb::Requester.get("#{path}/#{ids.join ','}", params), representer)
       end
 
-      def search(**kwargs)
-        kwargs[:offset] = kwargs[:offset] || 0
-        kwargs[:limit] = kwargs[:limit] || 50
-        kwargs[:fields] = kwargs[:fields] || '*'
+      def all(**params)
+        params[:fields] ||= '*'
+        params[:limit] ||= 50
 
-        build_collection(Igdb::Requester.get("#{path}/", kwargs), representer)
-      end
-
-      # Alias for #search
-      def all(**kwargs)
-        search(kwargs)
+        build_collection(Igdb::Requester.get("#{path}/", params), representer)
       end
 
       private
+
+      def find_by_slug(slug, params)
+        params[:'filter[slug][eq]'] = slug
+
+        build_single_resource(Igdb::Requester.get("#{path}/", params)[0], representer)
+      end
 
       def build_single_resource(response, representer)
         representer.new(new).from_hash(response)
