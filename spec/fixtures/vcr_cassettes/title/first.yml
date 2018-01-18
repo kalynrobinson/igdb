@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-2445582011268.apicast.io/titles/?fields=*&limit=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.5.0p-1
+      User-Key:
+      - "<IGDB_KEY>"
+      Host:
+      - api-2445582011268.apicast.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 18 Jan 2018 17:35:51 GMT
+      Server:
+      - openresty/1.9.15.1
+      X-Powered-By:
+      - 3scale API Management - http://www.3scale.net
+      Content-Length:
+      - '159'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAC/23OvQrCMBSG4VspZ06btKY2ZHNyFtxKkbQJsZD+mJyQQbx3A+Kk88v38PVPmDXIpm7aA4FVLQYknN02qhWLy6m4moDGA4HJG4VG3xSCrDkXrWCMdw0XBOKuf5PouiOB4KLNoP2A5UOV+AWjd7ncEfcgKU0pVbPVYzVtC8UZnQn038rmhwFkXzPOhtfwBpBpFgS/AAAA
+    http_version: 
+  recorded_at: Thu, 18 Jan 2018 17:35:51 GMT
+recorded_with: VCR 4.0.0
