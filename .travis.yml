@@ -2,10 +2,13 @@ language: ruby
 rvm:
   - 2.3
 install: bundle install --jobs=3 --retry=3
-addons:
-  code_climate:
-    repo_token: 8ffbec2a216b73652275893dbfb29f9b73035ba8e7d00f4743ec4824f8eacfdd
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 script: rspec spec
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 deploy:
   provider: rubygems
   api_key:

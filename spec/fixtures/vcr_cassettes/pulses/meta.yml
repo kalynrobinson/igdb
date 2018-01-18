@@ -12,9 +12,9 @@ http_interactions:
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
-      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.0p0
       User-Key:
-      - 070702fa7336d87a8cdd509beb23e2f4
+      - ENV['IGDB_KEY']
       Host:
       - api-2445582011268.apicast.io
   response:
@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 16 Jan 2018 18:07:09 GMT
+      - Wed, 17 Jan 2018 23:48:01 GMT
       Server:
       - openresty/1.9.15.1
       X-Powered-By:
@@ -41,5 +41,5 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAC/2WPWw4DIQhF9+J344aaxlAlSuJjotCmu686nY5pf4B7CXC4KguMvtSXuigmjthzk5RgOpTAD0dqHJFcjyAcSu2FrdhnnQEevc2dYpPY0LQi1eKU90gtHF3yuVQcqx7ksLRvoReWj5Mh4almMpNiP3HwLUrvrKtjYxFHub/0N6uf5Dj8eAHJh0HK4Ju6vQGSWEWtJAEAAA==
     http_version: 
-  recorded_at: Tue, 16 Jan 2018 18:07:09 GMT
+  recorded_at: Wed, 17 Jan 2018 23:48:02 GMT
 recorded_with: VCR 4.0.0

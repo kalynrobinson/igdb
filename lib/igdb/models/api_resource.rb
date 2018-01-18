@@ -14,43 +14,34 @@ module Igdb
         Igdb::Requester.get("#{path}/meta")
       end
 
-      def find(id, options = {})
-        params = options
-        params[:fields] = '*' unless params[:fields]
+      def find(id, **kwargs)
+        kwargs[:fields] = kwargs[:fields] || '*'
 
         if id.class == Array
-          build_collection(Igdb::Requester.get("#{path}/#{id.join(',')}", params), representer)
+          build_collection(Igdb::Requester.get("#{path}/#{id.join(',')}", kwargs), representer)
         else
-          build_single_resource(Igdb::Requester.get("#{path}/#{id}", params)[0], representer)
+          build_single_resource(Igdb::Requester.get("#{path}/#{id}", kwargs)[0], representer)
         end
       end
 
-      def slug(id, options = {})
-        params = options
-        params['fields'] = '*' unless params[:fields]
-        params['filter[slug][eq]'] = id
+      def slug(id, **kwargs)
+        kwargs[:fields] = kwargs[:fields] || '*'
+        kwargs[:'filter[slug][eq]'] = id
 
-        build_single_resource(Igdb::Requester.get("#{path}/", params)[0], representer)
+        build_single_resource(Igdb::Requester.get("#{path}/", kwargs)[0], representer)
       end
 
-      def search(opts = {})
-        params = {}.tap do |hash|
-          hash['search'] = opts[:query] if opts[:query]
-          hash['filters'] = opts[:filters] if opts[:filters]
-          hash['fields'] = '*'
-        end
+      def search(**kwargs)
+        kwargs[:offset] = kwargs[:offset] || 0
+        kwargs[:limit] = kwargs[:limit] || 50
+        kwargs[:fields] = kwargs[:fields] || '*'
 
-        build_collection(Igdb::Requester.get("#{path}/", params), representer)
+        build_collection(Igdb::Requester.get("#{path}/", kwargs), representer)
       end
 
-      def all(opts = {})
-        params = {}.tap do |hash|
-          hash['offset'] = opts[:offset] || 0
-          hash['limit'] = opts[:limit] || 50
-          hash['fields'] = '*'
-        end
-
-        build_collection(Igdb::Requester.get("#{path}/", opts), representer)
+      # Alias for #search
+      def all(**kwargs)
+        search(kwargs)
       end
 
       private
