@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-2445582011268.apicast.io/games/?fields=*&limit=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.2.0 x86_64) ruby/2.5.0p-1
+      User-Key:
+      - "<IGDB_KEY>"
+      Host:
+      - api-2445582011268.apicast.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 18 Jan 2018 17:35:55 GMT
+      Server:
+      - openresty/1.9.15.1
+      X-Powered-By:
+      - 3scale API Management - http://www.3scale.net
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Thu, 18 Jan 2018 17:35:55 GMT
+recorded_with: VCR 4.0.0
