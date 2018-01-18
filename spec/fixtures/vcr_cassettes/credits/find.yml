@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-2445582011268.apicast.io/credits/1342178444?fields=*
+    uri: https://api-2445582011268.apicast.io/credits/1342178449?fields=*
     body:
       encoding: US-ASCII
       string: ''
@@ -12,9 +12,9 @@ http_interactions:
       Accept-Encoding:
       - gzip, deflate
       User-Agent:
-      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.0p0
+      - rest-client/2.0.2 (darwin17.3.0 x86_64) ruby/2.5.0p-1
       User-Key:
-      - 070702fa7336d87a8cdd509beb23e2f4
+      - ENV['IGDB_KEY']
       Host:
       - api-2445582011268.apicast.io
   response:
@@ -27,19 +27,19 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 18 Jan 2018 03:29:37 GMT
+      - Thu, 18 Jan 2018 06:49:38 GMT
       Server:
       - openresty/1.9.15.1
       X-Powered-By:
       - 3scale API Management - http://www.3scale.net
       Content-Length:
-      - '117'
+      - '176'
       Connection:
       - keep-alive
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAC/3WMPQqAIBiGrxLv7JD1SebYCdojwlTCoQyzIaK7Zwdofn6GG95C8Zoq3kgiYtj06qDQx2BPk3zYik7P3h1gMNHp5OykU06obLNfciGpYTh3+4dMBkuIF5Rg2MPhvylULcUzvrNBUqyAAAAA
+        H4sIAAAAAAAC/3WOSw6CMBBArzKZNRrQym/nHdgZYyqMtAHaZjpEifHu1gO4fS8veZc32gHb4qgORVUr1WTo9ELY4nmml3YDMXREdz1usIPOaDdFEA/LBkEzOYnw8AxiyHIiYsn1BKmDuIbgWZJiv47mV8xaCJ6eJ3B2NBL3mGHPlOhw05IuVN4opfKibKoywzUM/1SfxOh5w/aUYfDRivUOW5XXn+sXLCVcxtMAAAA=
     http_version: 
-  recorded_at: Thu, 18 Jan 2018 03:29:37 GMT
+  recorded_at: Thu, 18 Jan 2018 06:49:38 GMT
 recorded_with: VCR 4.0.0

@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-2445582011268.apicast.io/companies/1?fields=*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin17.3.0 x86_64) ruby/2.5.0p-1
+      User-Key:
+      - ENV['IGDB_KEY']
+      Host:
+      - api-2445582011268.apicast.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 18 Jan 2018 06:49:43 GMT
+      Server:
+      - openresty/1.9.15.1
+      X-Powered-By:
+      - 3scale API Management - http://www.3scale.net
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Thu, 18 Jan 2018 06:49:43 GMT
+recorded_with: VCR 4.0.0
