@@ -10,9 +10,10 @@
 ```ruby
 $ gem install igdb2
 ```
+
 ## Usage
 
-##### Connect
+### Connect
 ```ruby
 $ Igdb.connect('api_key')
 ```
@@ -20,28 +21,32 @@ If no parameter is given, Igdb will default to ENV['IGDB_KEY'].
 ```ruby
 $ Igdb.connect # => Igdb.connect(ENV['IGDB_KEY'])
 ```
-##### Usage
+### Usage
   Find game by ID
 ```ruby
-$ Igdb::Game.find(1971)
+$ Igdb::Game.find(1971) 
 ```
   Find game by ID with options
 ```ruby
-$ Igdb::Game.find(1971, { fields: 'slug,name' })
+$ Igdb::Game.find(1971, fields: 'slug,name')
 ```
   Find a game by slug
 ```ruby
-$ Igdb::Game.slug('batman')
+$ Igdb::Game.find('world-of-warcraft')
 ```
-  Search for a game
+  Search for games
 ```ruby
-$ Igdb::Game.search(query: 'batman')
+$ Igdb::Game.select(
+    fields: 'name,popularity', 
+    order: 'popularity:desc', 
+    'filter[total_rating_count][gt]': 10
+  )
 ```
   Return the number of games in the database
 ```ruby
 $ Igdb::Game.count
 ```
-  Return a list of all games with an offset and/or limit
+  Return a list of all games
 ```ruby
 $ Igdb::Game.all
 $ Igdb::Game.all(limit: 10) # Limit to 10 results - Default 100
@@ -77,6 +82,9 @@ Igdb::Theme
 Igdb::Title
 Igdb::Version
 ```
+### Documentation
+See [IGDB Documentation](https://igdb.github.io/api/about/welcome/) for more information on endpoints and writing requests.
+
 ## Contributing
 
 1. Fork it ( https://github.com/kalynrobinson/igdb/fork )
